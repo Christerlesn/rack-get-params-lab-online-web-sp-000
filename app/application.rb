@@ -24,7 +24,7 @@ class Application
     if @@cart.empty?
       resp.write "Your cart is empty"
     else
-    end  
+    end
 
   def handle_search(search_term)
     if @@items.include?(search_term)
