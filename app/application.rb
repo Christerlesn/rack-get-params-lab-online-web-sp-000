@@ -19,9 +19,12 @@ class Application
 
     resp.finish
   end
-  # if req.path.match(/cart/)
-  #   @@cart = []
-  #   if @@cart.empty?
+  if req.path.match(/cart/)
+    @@cart = []
+    if @@cart.empty?
+      resp.write "Your cart is empty"
+    else
+    end  
 
   def handle_search(search_term)
     if @@items.include?(search_term)
