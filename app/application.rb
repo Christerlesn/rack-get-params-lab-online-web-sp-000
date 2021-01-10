@@ -8,14 +8,13 @@ class Application
 
 
     if req.path.match(/cart/)
-      @@cart.each do |t|
-        resp.write "#{t}\n"
+      if @@cart.empty?
+        resp.write "Your cart is empty"
+      else
+        @@cart.each do |t|
+          resp.write "#{t}\n"
+        end
       end
-      # if @@cart.empty?
-      #   resp.write "Your cart is empty"
-      # else
-      #   resp.write "Testing"
-      # end
     elsif req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item}\n"
