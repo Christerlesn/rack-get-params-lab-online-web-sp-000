@@ -25,6 +25,13 @@ class Application
     else
       resp.write "Path Not Found"
     end
+
+  elsif req.path.match(/add/)
+    search_term = req.params["item"]
+    resp.write add_to_cart(search_term)
+    else
+    resp.write "We don't have that item"
+  end
     resp.finish
   end
 
