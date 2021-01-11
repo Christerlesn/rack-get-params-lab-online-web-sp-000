@@ -7,7 +7,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/cart/)
-      if !@@cart.empty
+      if !@@cart.empty?
         @@cart.each do |t|
           resp.write "#{t}\n"
         end
