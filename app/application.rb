@@ -19,12 +19,6 @@ class Application
         resp.write "#{item}\n"
        end
 
-    elsif req.path.match(/add/)
-          search_term = req.params["item"]
-          resp.write add_to_cart(search_term)
-        else
-          resp.write "We don't have that item"
-
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
