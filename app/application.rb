@@ -42,12 +42,12 @@ class Application
     end
   end
 
-  def add_to_cart(search_term)
-    if @@item.include?(search_term)
-      @@cart << search_term
-      return "added #{search_term}"
-    else
-      return "We don't have that item"
-    end
-  end
+  # def add_to_cart(search_term)
+  #   if @@item.include?(search_term)
+  #     @@cart << search_term
+  #     return "added #{search_term}"
+  #   else
+  #     return "We don't have that item"
+  #   end
+  # end
 end
